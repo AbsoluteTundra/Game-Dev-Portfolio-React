@@ -1,0 +1,146 @@
+body
+{
+    margin: 0;
+}
+
+nav
+{
+    color: white;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+
+nav a
+{
+    padding: 0px 5px 0px 5px;
+	border-left: 1px solid white;
+	border-right: 1px solid white;
+	text-decoration: none;
+	text-align: center;
+	color: white;
+	font-size: xx-large;
+}
+
+nav a:hover
+{
+    color:gray
+}
+
+h1
+{
+    text-decoration: underline;
+    text-align: center;
+    margin:0;
+
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+p
+{
+    margin:0;
+    font-size: large;
+
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+
+/*Mobile Grid*/
+@media only screen and (max-width: 768px)
+{
+    .ProjectItemsContainer 
+    {
+        display: grid;
+        grid-template-columns: repeat(1, 100% [col-start]);
+    }
+}
+
+/*Desktop Grid*/
+@media (min-width:1281px)
+{
+    .ProjectItemsContainer 
+    {
+        display: grid;
+        grid-template-columns: repeat(3, 33.33% [col-start]);
+    }
+}
+
+
+.ProjectSection
+{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 5px;
+    border-style: solid;
+    border-width: 5px;
+    background-color: white;
+    border-color: black;
+}
+
+.ProjectSectionSelected
+{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 5px;
+    border-style: solid;
+    border-width: 5px;
+    background-color: white;
+    border-color: darkgray;
+}
+
+.ProjectImage
+{
+   border-style: solid;
+   margin: 5px;
+}
+
+.ProjectSectionButton
+{
+    width: 150px;
+	background-color: black;
+	color: white;
+	font-size: 15px;
+	border-radius: 5px;
+	padding: 5px;
+    margin: 5px;
+    align-self: center;
+	text-decoration: none;
+}
+
+.ProjectSectionButton:hover
+{
+	background-color: darkgray;
+}
+
+/*Footer Style*/
+footer
+{
+    height: 30px;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	flex-direction: row;
+	background-color: black;
+}
+
+.FooterIcon
+{
+    vertical-align: middle;
+	width: 25px;
+	height: 25px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+/*End Footer Style*/

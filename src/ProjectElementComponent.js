@@ -31,14 +31,14 @@ class ProjectElementComponent extends Component
             }
 
             this.state.currentScreenshotCount++;
-            this.projectImage.current.src=this.props.projectDirectory+"screenshot"+this.state.currentScreenshotCount+".jpg";
+            this.projectImage.current.src=this.props.projectInfo.projectDirectory+"screenshot"+this.state.currentScreenshotCount+".jpg";
             }, 1000);
         }
     }
 
     ProjectSectionLeave=()=>
     {
-        this.projectImage.current.src= this.props.projectDirectory+"logo.jpg";
+        this.projectImage.current.src= this.props.projectInfo.projectDirectory+"logo.jpg";
         this.projectDiv.current.className ='ProjectSection';
         this.state.currentScreenshotCount=0;
 
@@ -50,12 +50,18 @@ class ProjectElementComponent extends Component
     {
         return(
                 <div ref={this.projectDiv} onMouseEnter={this.ProjectSectionEnter} onTouchStart={this.ProjectSectionEnter} onMouseLeave={this.ProjectSectionLeave} onTouchEnd={this.ProjectSectionLeave} className="ProjectSection">
-                    <img ref={this.projectImage} className="ProjectImage" src={this.props.projectDirectory+"logo.jpg"}></img>
-                    <h1>{this.props.projectTitle}</h1>
-                    <p>{this.props.projectDescription}</p>
-                    <a className="ProjectSectionButton" href={this.props.projectPage}>Go to project page</a>
+                    <img ref={this.projectImage} className="ProjectImage" src={this.props.projectInfo.projectDirectory+"logo.jpg"}></img>
+                    <h1>{this.props.projectInfo.projectTitle}</h1>
+                    <p>{this.props.projectInfo.projectDescription}</p>
+                    <a onClick={this.OnClickProjectButton} className="ProjectSectionButton">Go to project page</a>
                 </div>
         );
+    }
+
+    OnClickProjectButton=()=>
+    {
+        this.ProjectSectionLeave();
+        this.props.loadProjectHandler(this.props.projectInfo);
     }
 }
 

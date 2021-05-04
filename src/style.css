@@ -144,3 +144,22 @@ footer
 	padding-right: 5px;
 }
 /*End Footer Style*/
+
+
+.ProjectPage
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ProjectPageImage
+{
+    width: 75%;
+}
+
+.ProjectPageDesciption
+{
+    margin-left: 10%;
+    margin-right: 10%;
+}

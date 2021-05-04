@@ -3,7 +3,7 @@ import ProjectElementComponent from './ProjectElementComponent'
 import NavigationBarElement from './NavigationBarElement'
 import FooterElement from './FooterElement'
 import "./style.css"
-import {ProjectData} from "./ProjectData"
+import {ProjectsData} from "./ProjectsData"
 
 
 class App extends Component
@@ -13,30 +13,32 @@ class App extends Component
     super(props);
 
     this.state = {
-        currentPage : "Projects"
+        currentPage : "ProjectsGallery",
+        currentSelectedProject:"None"
     };
   }
   
 
-  SwtichPage=()=>
+  LoadProjectPage=(selectedProjectInfo)=>
   {
-    this.setState({currentPage:"None"});
+    this.setState({currentPage:"ProjectPage"})
+    this.setState({currentSelectedProject:selectedProjectInfo});
   }
 
   render()
   {
-    if(this.state.currentPage=="Projects")
+    if(this.state.currentPage=="ProjectsGallery")
     {
       return (
         <div>
-           <button onClick={this.SwtichPage}>Hello</button>
           <NavigationBarElement/>
           <h1>Projects</h1>
           <div className="ProjectItemsContainer">
     
-            {ProjectData.map(function(data,index){
-              return <ProjectElementComponent projectTitle={ProjectData[index].projectTitle} projectDescription={ProjectData[index].projectDescription} projectPage={ProjectData[index].projectPage} projectDirectory={ProjectData[index].projectDirectory}/>
-            })}
+            {ProjectsData.map((projectInfo) =>(
+              <ProjectElementComponent loadProjectHandler={this.LoadProjectPage} projectInfo={projectInfo}/>
+            ))};
+  
     
           </div>
           <FooterElement/>
@@ -44,9 +46,21 @@ class App extends Component
         
       );
     }
-    else
+    else if(this.state.currentPage=="ProjectPage")
     {
-      return(<h1>Something went wrong!</h1>);
+      return (
+        <div>
+          <NavigationBarElement/>
+          <div className="ProjectPage">
+            <h1>{this.state.currentSelectedProject.projectTitle}</h1>
+            <img className="ProjectPageImage" src={this.state.currentSelectedProject.projectDirectory+"logo.jpg"}/>
+            <h1>Project Description</h1>
+            <p className="ProjectPageDesciption">{this.state.currentSelectedProject.projectDescription}</p>
+          </div>
+          <FooterElement/>
+        </div>
+        
+      );
     }
   }
 

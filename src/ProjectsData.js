@@ -1,4 +1,4 @@
-export const ProjectData=
+export const ProjectsData=
 [
     {
         projectTitle:"Muscle Magic",

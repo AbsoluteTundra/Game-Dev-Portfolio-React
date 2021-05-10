@@ -13,10 +13,10 @@ export const ProjectsData=
         projectDirectory:"Projects/To The Core/",
     },
     {
-        projectTitle:"Muscle Magic",
-        projectDescription:"Muscle Magic is a local multiplayer brawler in which you play as powerful, muscular wizards and barrage your opponents with a variety of wacky spells. Grab up to 3 of your friends and duke it out to see who is truly the fittest mage of them all!",
+        projectTitle:"Random Racing",
+        projectDescription:"A racing game inspired by Mario Kart",
         projectPage:"https://store.steampowered.com/app/1061150/Muscle_Magic/",
-        projectDirectory:"Projects/Muscle Magic/",
+        projectDirectory:"Projects/Random Racing/",
     },
     {
         projectTitle:"To The Core",

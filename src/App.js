@@ -64,8 +64,9 @@ class App extends Component
 
             <div>
               <h1>Project Info</h1>
-              <p><strong>Team Size:</strong>{this.state.currentSelectedProject.projectTeamSize}</p>
-              <p><strong>Game Engine:</strong>{this.state.currentSelectedProject.projectEngine}</p>
+              <p><strong>Year: </strong>{this.state.currentSelectedProject.projectYear}</p>
+              <p><strong>Team Size: </strong>{this.state.currentSelectedProject.projectTeamSize}</p>
+              <p><strong>Game Engine: </strong>{this.state.currentSelectedProject.projectEngine}</p>
             </div>
 
             <h1>Developer Story</h1>

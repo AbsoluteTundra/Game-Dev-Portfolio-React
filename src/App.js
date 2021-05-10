@@ -57,10 +57,17 @@ class App extends Component
         <div>
           <NavigationBarElement pageSwitcher={this.SwitchPage}/>
           <div className="ProjectPage">
-            <h1>{this.state.currentSelectedProject.projectTitle}</h1>
             <img className="ProjectPageImage" src={this.state.currentSelectedProject.projectDirectory+"logo.jpg"}/>
             <h1>Project Description</h1>
             <p className="ProjectPageDesciption">{this.state.currentSelectedProject.projectDescription}</p>
+
+            <div>
+              <h1>Project Info</h1>
+              <p><strong>Team Size:</strong>{this.state.currentSelectedProject.projectTeamSize}</p>
+              <p><strong>Game Engine:</strong>{this.state.currentSelectedProject.projectEngine}</p>
+            </div>
+
+            <h1>Developer Story</h1>
           </div>
           <FooterElement/>
         </div>

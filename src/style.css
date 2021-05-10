@@ -3,30 +3,6 @@ body
     margin: 0;
 }
 
-nav
-{
-    color: white;
-    background-color: black;
-    display: flex;
-    justify-content: center;
-}
-
-nav a
-{
-    padding: 0px 5px 0px 5px;
-	border-left: 1px solid white;
-	border-right: 1px solid white;
-	text-decoration: none;
-	text-align: center;
-	color: white;
-	font-size: xx-large;
-}
-
-nav a:hover
-{
-    color:gray
-}
-
 h1
 {
     text-decoration: underline;
@@ -52,8 +28,34 @@ p
     user-select: none;
 }
 
+/* Nav Style*/
+nav
+{
+    color: white;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
 
-/*Mobile Grid*/
+nav a
+{
+    padding: 0px 5px 0px 5px;
+	border-left: 1px solid white;
+	border-right: 1px solid white;
+	text-decoration: none;
+	text-align: center;
+	color: white;
+	font-size: xx-large;
+}
+
+nav a:hover
+{
+    color:gray
+}
+/* End Nav Style*/
+
+/* Projects Page Style*/
+/* Mobile Grid*/
 @media only screen and (max-width: 768px)
 {
     .ProjectItemsContainer 
@@ -72,7 +74,6 @@ p
         grid-template-columns: repeat(3, 33.33% [col-start]);
     }
 }
-
 
 .ProjectSection
 {
@@ -123,8 +124,9 @@ p
 {
 	background-color: darkgray;
 }
+/* End Projects Page Style*/
 
-/*Footer Style*/
+/* Footer Style */
 footer
 {
     height: 30px;
@@ -143,9 +145,10 @@ footer
 	padding-left: 5px;
 	padding-right: 5px;
 }
-/*End Footer Style*/
+/* End Footer Style */
 
 
+/* individual Project Page Style */
 .ProjectPage
 {
     display: flex;
@@ -163,3 +166,4 @@ footer
     margin-left: 10%;
     margin-right: 10%;
 }
+/* End individual Project Page Style */

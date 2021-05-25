@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import ProjectElementComponent from './ProjectElementComponent'
-import NavigationBarElement from './NavigationBarComponent'
+import NavigationBarComponent from './NavigationBarComponent'
 import FooterElement from './FooterElement'
 import "./style.css"
 import {ProjectsData} from "./ProjectsData"
 import "./Styles/ProjectPageStyle.css"
+import InvidualProjectPageElement from './InvidualProjectPageElement'
 
 
 class App extends Component
@@ -37,7 +38,7 @@ class App extends Component
     {
       return (
         <div>
-          <NavigationBarElement pageSwitcher={this.SwitchPage}/>
+          <NavigationBarComponent pageSwitcher={this.SwitchPage}/>
           <h1>Projects</h1>
           <div className="ProjectItemsContainer">
     
@@ -55,33 +56,14 @@ class App extends Component
     else if(this.state.currentPage=="ProjectPage")
     {
       return (
-        <div>
-          <NavigationBarElement pageSwitcher={this.SwitchPage}/>
-          <div className="ProjectPage">
-            <img className="ProjectPageImage" src={this.state.currentSelectedProject.projectDirectory+"logo.jpg"}/>
-            <h1>Project Description</h1>
-            <p className="ProjectPageParagraph">{this.state.currentSelectedProject.projectDescription}</p>
-
-            <div>
-              <h1>Project Info</h1>
-              <p><strong>Year: </strong>{this.state.currentSelectedProject.projectYear}</p>
-              <p><strong>Team Size: </strong>{this.state.currentSelectedProject.projectTeamSize}</p>
-              <p><strong>Game Engine: </strong>{this.state.currentSelectedProject.projectEngine}</p>
-            </div>
-
-            <h1>Developer Story</h1>
-            <p className="ProjectPageParagraph">{this.state.currentSelectedProject.projectDevStory}</p>
-          </div>
-          <FooterElement/>
-        </div>
-        
+        <InvidualProjectPageElement pageSwitcher={this.SwitchPage} currentSelectedProject={this.state.currentSelectedProject}/>
       );
     }
     else if(this.state.currentPage=="AboutMe")
     {
       return (
         <div>
-          <NavigationBarElement pageSwitcher={this.SwitchPage}/>
+          <NavigationBarComponent pageSwitcher={this.SwitchPage}/>
             <h1>About Me</h1>
           <FooterElement/>
         </div>

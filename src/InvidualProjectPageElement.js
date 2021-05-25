@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import NavigationBarComponent from './NavigationBarComponent'
+import NavigationBarElement from './NavigationBarElement'
 import FooterElement from './FooterElement'
 
 class InvidualProjectPageElement extends Component
@@ -13,7 +13,7 @@ class InvidualProjectPageElement extends Component
     {
         return(
             <div>
-            <NavigationBarComponent pageSwitcher={this.SwitchPage}/>
+            <NavigationBarElement pageSwitcher={this.SwitchPage}/>
             <div className="ProjectPage">
               <img className="ProjectPageImage" src={this.props.currentSelectedProject.projectDirectory+"logo.jpg"}/>
               <h1>Project Description</h1>

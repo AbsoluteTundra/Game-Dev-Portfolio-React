@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import ProjectElementComponent from './ProjectElementComponent'
-import NavigationBarComponent from './NavigationBarComponent'
+import ProjectGalleryElement from './ProjectGalleryElement'
+import NavigationBarElement from './NavigationBarElement'
 import FooterElement from './FooterElement'
 import "./style.css"
 import {ProjectsData} from "./ProjectsData"
@@ -38,12 +38,12 @@ class App extends Component
     {
       return (
         <div>
-          <NavigationBarComponent pageSwitcher={this.SwitchPage}/>
+          <NavigationBarElement pageSwitcher={this.SwitchPage}/>
           <h1>Projects</h1>
           <div className="ProjectItemsContainer">
     
             {ProjectsData.map((projectInfo) =>(
-              <ProjectElementComponent loadProjectHandler={this.LoadProjectPage} projectInfo={projectInfo}/>
+              <ProjectGalleryElement loadProjectHandler={this.LoadProjectPage} projectInfo={projectInfo}/>
             ))};
   
     
@@ -63,7 +63,7 @@ class App extends Component
     {
       return (
         <div>
-          <NavigationBarComponent pageSwitcher={this.SwitchPage}/>
+          <NavigationBarElement pageSwitcher={this.SwitchPage}/>
             <h1>About Me</h1>
           <FooterElement/>
         </div>

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 
-class NavigationBarComponent extends Component
+class NavigationBarElement extends Component
 {
 
   constructor(props)
@@ -30,4 +30,4 @@ class NavigationBarComponent extends Component
   }
 }
 
-export default NavigationBarComponent;
+export default NavigationBarElement;

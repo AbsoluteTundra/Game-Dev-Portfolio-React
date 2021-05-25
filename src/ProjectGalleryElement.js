@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class ProjectElementComponent extends Component
+class ProjectGalleryElement extends Component
 {
     state =
     {
@@ -65,4 +65,4 @@ class ProjectElementComponent extends Component
     }
 }
 
-export default ProjectElementComponent;
+export default ProjectGalleryElement;

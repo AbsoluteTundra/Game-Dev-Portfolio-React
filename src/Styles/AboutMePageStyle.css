@@ -1,0 +1,21 @@
+.AboutMeContainer
+{
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-style: solid;
+}
+
+.SkillsContainer
+{
+    display: flex;
+    justify-content: center;
+}
+
+.SkillIcon
+{
+    width: 100px;
+    height: 100px;
+}

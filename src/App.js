@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import ProjectGalleryElement from './ProjectGalleryElement'
 import NavigationBarElement from './NavigationBarElement'
 import FooterElement from './FooterElement'
-import "./style.css"
-import {ProjectsData} from "./ProjectsData"
+import "./Styles/GlobalStyle.css"
 import "./Styles/ProjectPageStyle.css"
-import InvidualProjectPageElement from './InvidualProjectPageElement'
+import "./Styles/AboutMePageStyle.css"
+import InvidualProjectPage from './Pages/InvidualProjectPage'
+import ProjectGalleryPage from './Pages/ProjectGalleryPage'
+import AboutMePage from './Pages/AboutMePage'
 
 
 class App extends Component
@@ -37,37 +38,19 @@ class App extends Component
     if(this.state.currentPage=="ProjectsGallery")
     {
       return (
-        <div>
-          <NavigationBarElement pageSwitcher={this.SwitchPage}/>
-          <h1>Projects</h1>
-          <div className="ProjectItemsContainer">
-    
-            {ProjectsData.map((projectInfo) =>(
-              <ProjectGalleryElement loadProjectHandler={this.LoadProjectPage} projectInfo={projectInfo}/>
-            ))};
-  
-    
-          </div>
-          <FooterElement/>
-        </div>
-        
+        <ProjectGalleryPage pageSwitcher={this.SwitchPage} loadProjectHandler={this.LoadProjectPage} projectInfo={this.state.currentSelectedProject}/>
       );
     }
     else if(this.state.currentPage=="ProjectPage")
     {
       return (
-        <InvidualProjectPageElement pageSwitcher={this.SwitchPage} currentSelectedProject={this.state.currentSelectedProject}/>
+        <InvidualProjectPage pageSwitcher={this.SwitchPage} currentSelectedProject={this.state.currentSelectedProject}/>
       );
     }
     else if(this.state.currentPage=="AboutMe")
     {
       return (
-        <div>
-          <NavigationBarElement pageSwitcher={this.SwitchPage}/>
-            <h1>About Me</h1>
-          <FooterElement/>
-        </div>
-        
+        <AboutMePage pageSwitcher={this.SwitchPage}/>
       );
     }
   }

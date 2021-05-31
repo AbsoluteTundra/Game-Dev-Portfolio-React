@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import NavigationBarElement from './NavigationBarElement'
-import FooterElement from './FooterElement'
+import NavigationBarElement from '../NavigationBarElement'
+import FooterElement from '../FooterElement'
 
-class InvidualProjectPageElement extends Component
+class InvidualProjectPage extends Component
 {
     constructor(props)
     {
@@ -13,7 +13,7 @@ class InvidualProjectPageElement extends Component
     {
         return(
             <div>
-            <NavigationBarElement pageSwitcher={this.SwitchPage}/>
+            <NavigationBarElement pageSwitcher={this.props.pageSwitcher}/>
             <div className="ProjectPage">
               <img className="ProjectPageImage" src={this.props.currentSelectedProject.projectDirectory+"logo.jpg"}/>
               <h1>Project Description</h1>
@@ -35,4 +35,4 @@ class InvidualProjectPageElement extends Component
     }
 }
 
-export default InvidualProjectPageElement;
+export default InvidualProjectPage;

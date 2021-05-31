@@ -1,11 +1,28 @@
-.AboutMeContainer
+/* Mobile Grid*/
+@media only screen and (max-width: 768px)
 {
-    display: flex;
-    flex-direction: row;
-    align-self: center;
-    margin-left: 5%;
-    margin-right: 5%;
-    border-style: solid;
+    .AboutMeContainer
+    {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+
+/*Desktop Grid*/
+@media (min-width:1281px)
+{
+    .AboutMeContainer
+    {
+        display: flex;
+        flex-direction: row;
+        align-self: center;
+        margin-left: 5%;
+        margin-right: 5%;
+        align-items: center;
+    }
 }
 
 .SkillsContainer

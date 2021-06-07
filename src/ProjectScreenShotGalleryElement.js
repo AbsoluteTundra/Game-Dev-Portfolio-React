@@ -13,14 +13,18 @@ class ProjectScreenShotGalleryElement extends Component
     {
         var i =1;
         setInterval(() => {
-            this.image.current.src=this.props.screenshotsDirectory+"screenshot"+i+".jpg";
-            i++
 
-            if(i>5)
+            if(this.image.current!=null)
             {
-                i=1;
+                this.image.current.src=this.props.screenshotsDirectory+"screenshot"+i+".jpg";
+                i++
+
+                if(i>5)
+                {
+                    i=1;
+                }
             }
-        }, 2500);
+        }, 5000);
     }
 
     render()

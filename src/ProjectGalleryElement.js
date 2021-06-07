@@ -6,7 +6,6 @@ class ProjectGalleryElement extends Component
     {
         interval:"",
         currentScreenshotCount:0,
-        maxScreenshotCount:5
     };
 
     constructor(props)
@@ -25,7 +24,7 @@ class ProjectGalleryElement extends Component
             this.state.interval = setInterval(() => 
             {
             
-            if(this.state.currentScreenshotCount==this.state.maxScreenshotCount)
+            if(this.state.currentScreenshotCount==this.props.projectInfo.screenshotCount)
             {
                 this.state.currentScreenshotCount=0;
             }

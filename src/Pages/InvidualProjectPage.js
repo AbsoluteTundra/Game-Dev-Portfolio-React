@@ -30,7 +30,7 @@ class InvidualProjectPage extends Component
               <h1>Developer Story</h1>
               <p className="ProjectPageParagraph">{this.props.currentSelectedProject.projectDevStory}</p>
 
-              <ProjectScreenshotGalleryElement screenshotsDirectory={this.props.currentSelectedProject.projectDirectory}/>
+              <ProjectScreenshotGalleryElement screenshotCount={this.props.currentSelectedProject.screenshotCount} screenshotsDirectory={this.props.currentSelectedProject.projectDirectory}/>
             </div>
             <FooterElement/>
           </div>

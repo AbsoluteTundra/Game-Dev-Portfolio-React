@@ -19,7 +19,7 @@ class ProjectScreenShotGalleryElement extends Component
                 this.image.current.src=this.props.screenshotsDirectory+"screenshot"+i+".jpg";
                 i++
 
-                if(i>5)
+                if(i>this.props.screenshotCount)
                 {
                     i=1;
                 }

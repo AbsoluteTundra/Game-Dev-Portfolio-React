@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import NavigationBarElement from '../NavigationBarElement'
 import FooterElement from '../FooterElement'
+import ProjectScreenshotGalleryElement from '../ProjectScreenShotGalleryElement'
 
 class InvidualProjectPage extends Component
 {
@@ -28,6 +29,8 @@ class InvidualProjectPage extends Component
   
               <h1>Developer Story</h1>
               <p className="ProjectPageParagraph">{this.props.currentSelectedProject.projectDevStory}</p>
+
+              <ProjectScreenshotGalleryElement screenshotsDirectory={this.props.currentSelectedProject.projectDirectory}/>
             </div>
             <FooterElement/>
           </div>

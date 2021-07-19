@@ -2,12 +2,30 @@ import React, { Component } from 'react';
 import NavigationBarElement from '../NavigationBarElement'
 import FooterElement from '../FooterElement'
 import ProjectScreenshotGalleryElement from '../ProjectScreenShotGalleryElement'
+import { ProjectsData } from '../ProjectsData';
 
 class InvidualProjectPage extends Component
 {
     constructor(props)
     {
         super(props);
+    }
+
+    AddTrailerElement() 
+    {
+      if(this.props.currentSelectedProject.projectTrailerLink !="")
+      {
+        return(
+          <div>
+            <h1>Trailer:</h1>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/XtOX2gqb1wE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        );
+      }
+      else
+      {
+        return(null);
+      }
     }
 
     render()
@@ -31,6 +49,7 @@ class InvidualProjectPage extends Component
               <p className="ProjectPageParagraph">{this.props.currentSelectedProject.projectDevStory}</p>
 
               <ProjectScreenshotGalleryElement screenshotCount={this.props.currentSelectedProject.screenshotCount} screenshotsDirectory={this.props.currentSelectedProject.projectDirectory}/>
+              {this.AddTrailerElement()}
             </div>
             <FooterElement/>
           </div>

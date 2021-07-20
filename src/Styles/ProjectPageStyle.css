@@ -33,3 +33,12 @@
     width: 75%;
     border-style: solid;
 }
+
+.ProjectTrailerContainer
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1px;
+}

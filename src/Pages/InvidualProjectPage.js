@@ -3,6 +3,7 @@ import NavigationBarElement from '../NavigationBarElement'
 import FooterElement from '../FooterElement'
 import ProjectScreenshotGalleryElement from '../ProjectScreenShotGalleryElement'
 import { ProjectsData } from '../ProjectsData';
+import { Player } from 'video-react';
 
 class InvidualProjectPage extends Component
 {
@@ -11,14 +12,14 @@ class InvidualProjectPage extends Component
         super(props);
     }
 
-    AddTrailerElement() 
+    ProjectTrailerElement() 
     {
       if(this.props.currentSelectedProject.projectTrailerLink !="")
       {
         return(
-          <div>
+          <div className="ProjectTrailerContainer">
             <h1>Trailer:</h1>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/XtOX2gqb1wE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="75%" src="https://www.youtube.com/embed/XtOX2gqb1wE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
         );
       }
@@ -49,7 +50,9 @@ class InvidualProjectPage extends Component
               <p className="ProjectPageParagraph">{this.props.currentSelectedProject.projectDevStory}</p>
 
               <ProjectScreenshotGalleryElement screenshotCount={this.props.currentSelectedProject.screenshotCount} screenshotsDirectory={this.props.currentSelectedProject.projectDirectory}/>
-              {this.AddTrailerElement()}
+
+              {this.ProjectTrailerElement()}
+
             </div>
             <FooterElement/>
           </div>

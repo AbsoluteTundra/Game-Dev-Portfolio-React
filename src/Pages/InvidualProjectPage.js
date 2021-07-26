@@ -19,7 +19,9 @@ class InvidualProjectPage extends Component
         return(
           <div className="ProjectTrailerContainer">
             <h1>Trailer:</h1>
-            <iframe width="75%" src="https://www.youtube.com/embed/XtOX2gqb1wE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div className="IFrameContainer">
+              <iframe class="IFrameVideo" src={this.props.currentSelectedProject.projectTrailerLink} title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
           </div>
         );
       }

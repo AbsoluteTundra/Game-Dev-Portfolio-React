@@ -5,6 +5,7 @@
     {
         display: grid;
         grid-template-columns: repeat(1, 100% [col-start]);
+        padding-bottom: 50px;
     }
 
     .ProjectImageContainer
@@ -20,6 +21,7 @@
     {
         display: grid;
         grid-template-columns: repeat(3, 33.33% [col-start]);
+        padding-bottom: 50px;
     }
 
     .ProjectImageContainer

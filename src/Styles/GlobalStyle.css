@@ -64,6 +64,9 @@ nav a:hover
 /* Footer Style */
 footer
 {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
     height: 30px;
 	display: flex;
 	justify-content: flex-end;

@@ -21,7 +21,7 @@ class ProjectGalleryPage extends Component
         
                 {ProjectsData.map((projectInfo) =>(
                 <ProjectGalleryElement loadProjectHandler={this.props.loadProjectHandler} projectInfo={projectInfo}/>
-                ))};
+                ))}
     
         
             </div>

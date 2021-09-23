@@ -15,17 +15,19 @@ class ProjectGalleryPage extends Component
     {
         return(
             <div>
-            <NavigationBarElement pageSwitcher={this.props.pageSwitcher}/>
-            <h1>Projects</h1>
-            <div className="ProjectItemsContainer">
-        
-                {ProjectsData.map((projectInfo) =>(
-                <ProjectGalleryElement loadProjectHandler={this.props.loadProjectHandler} projectInfo={projectInfo}/>
-                ))}
-    
-        
-            </div>
-            <FooterElement/>
+                <NavigationBarElement pageSwitcher={this.props.pageSwitcher}/>
+                <div className="ProjectGalleryContainer">
+                    <h1>Projects</h1>
+                    <div className="ProjectItemsContainer">
+                
+                        {ProjectsData.map((projectInfo) =>(
+                        <ProjectGalleryElement loadProjectHandler={this.props.loadProjectHandler} projectInfo={projectInfo}/>
+                        ))}
+            
+                
+                    </div>
+                </div>
+                <FooterElement/>
             </div>  
         );
     }

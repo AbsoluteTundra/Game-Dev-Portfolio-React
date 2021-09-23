@@ -1,3 +1,8 @@
+.ProjectGalleryContainer
+{
+    margin-bottom: 50px;
+}
+
 /* Mobile*/
 @media only screen and (max-width: 768px)
 {
@@ -5,7 +10,6 @@
     {
         display: grid;
         grid-template-columns: repeat(1, 100% [col-start]);
-        margin-bottom: 50px;
     }
 
     .ProjectImageContainer
@@ -21,7 +25,6 @@
     {
         display: grid;
         grid-template-columns: repeat(3, 33.33% [col-start]);
-        margin-bottom: 50px;
     }
 
     .ProjectImageContainer

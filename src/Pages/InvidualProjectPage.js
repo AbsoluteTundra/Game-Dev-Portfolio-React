@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import NavigationBarElement from '../NavigationBarElement'
 import FooterElement from '../FooterElement'
 import ProjectScreenshotGalleryElement from '../ProjectScreenShotGalleryElement'
-import { ProjectsData } from '../ProjectsData';
-import { Player } from 'video-react';
 
 class InvidualProjectPage extends Component
 {

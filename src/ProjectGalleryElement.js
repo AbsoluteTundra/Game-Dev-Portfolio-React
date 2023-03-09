@@ -52,7 +52,6 @@ class ProjectGalleryElement extends Component
                     <div className="ProjectImageContainer">
                         <img ref={this.projectImage} className="ProjectImage" src={this.props.projectInfo.projectDirectory+"logo.jpg"}></img>
                     </div>
-                    <h1>{this.props.projectInfo.projectTitle}</h1>
                     <p>{this.props.projectInfo.projectDescription}</p>
                     <a onClick={this.OnClickProjectButton} className="ProjectSectionButton">Go to project page</a>
                 </div>

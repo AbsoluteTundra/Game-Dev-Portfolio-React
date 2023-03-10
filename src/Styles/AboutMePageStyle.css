@@ -5,7 +5,7 @@
     align-self: center;
     margin:auto;
     flex-direction: row;
-    border-color: black;
+    border-color: var(--primary);
     padding: 5px;
     border-style: solid;
     border-radius: 5px;
@@ -24,7 +24,7 @@ p
     flex-direction: row;
     margin:auto;
     width: 50%;
-    border-color: black;
+    border-color: var(--primary);
     border-style: solid;
     border-radius: 5px;
     margin-top: 10px;

@@ -30,8 +30,7 @@ class ProjectGalleryElement extends Component
             }
 
             this.state.currentScreenshotCount++;
-            this.projectImage.current.src="https://github.com/AbsoluteTundra/Game-Dev-Portfolio-React/blob/main/public/projects/Muscle%20Magic/logo.jpg"
-            //this.projectImage.current.src=this.props.projectInfo.projectDirectory+"screenshot"+this.state.currentScreenshotCount+".jpg";
+            this.projectImage.current.src=this.props.projectInfo.projectDirectory+"screenshot"+this.state.currentScreenshotCount+".jpg";
             }, 1000);
         }
     }

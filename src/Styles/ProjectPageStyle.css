@@ -4,6 +4,16 @@
     flex-direction: column;
     align-items: center;
     margin-bottom: 50px;
+    margin: auto;
+}
+
+/*Desktop*/
+@media (min-width:1281px)
+{
+    .ProjectPage 
+    {
+        width: 50%;
+    }
 }
 
 .ProjectPageImage

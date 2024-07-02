@@ -56,6 +56,16 @@
     position: relative;
 }
 
+.ProjectSection > p
+{
+    flex-grow: 1;
+}
+
+.ProjectSectionSelected > p
+{
+    flex-grow: 1;
+}
+
 .ProjectImage
 {
    max-width: 100%;
@@ -77,8 +87,6 @@
     align-self: center;
 	text-decoration: none;
     transition-duration: 500ms;
-    position: absolute;
-    bottom: 0px;
 }
 
 .ProjectSectionButton:hover

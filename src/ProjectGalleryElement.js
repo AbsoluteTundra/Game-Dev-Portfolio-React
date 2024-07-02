@@ -17,8 +17,6 @@ class ProjectGalleryElement extends Component
 
     ProjectSectionEnter=()=>
     {
-       this.projectDiv.current.className ='ProjectSectionSelected';
-
         if(this.state.interval=="")
         {
             this.state.interval = setInterval(() => 
@@ -38,7 +36,6 @@ class ProjectGalleryElement extends Component
     ProjectSectionLeave=()=>
     {
         this.projectImage.current.src= this.props.projectInfo.projectDirectory+"logo.jpg";
-        this.projectDiv.current.className ='ProjectSection';
         this.state.currentScreenshotCount=0;
 
         clearInterval(this.state.interval);

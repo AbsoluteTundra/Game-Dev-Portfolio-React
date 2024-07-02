@@ -49,9 +49,7 @@ class ProjectGalleryElement extends Component
     {
         return(
                 <div ref={this.projectDiv} onMouseEnter={this.ProjectSectionEnter} onTouchStart={this.ProjectSectionEnter} onMouseLeave={this.ProjectSectionLeave} onTouchEnd={this.ProjectSectionLeave} className="ProjectSection">
-                    <div className="ProjectImageContainer">
                         <img ref={this.projectImage} className="ProjectImage" src={this.props.projectInfo.projectDirectory+"logo.jpg"}></img>
-                    </div>
                     <p>{this.props.projectInfo.projectDescription}</p>
                     <a onClick={this.OnClickProjectButton} className="ProjectSectionButton">Go to project page</a>
                 </div>

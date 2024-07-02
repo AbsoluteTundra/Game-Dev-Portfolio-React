@@ -56,14 +56,6 @@
     position: relative;
 }
 
-.ProjectImageContainer
-{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 1px;
-}
-
 .ProjectImage
 {
    max-width: 100%;
@@ -80,11 +72,13 @@
 	color: var(--secondary);
 	font-size: 15px;
 	border-radius: 5px;
-	padding: 5px;
+	padding: 10px;
     margin: 5px;
     align-self: center;
 	text-decoration: none;
     transition-duration: 500ms;
+    position: absolute;
+    bottom: 0px;
 }
 
 .ProjectSectionButton:hover

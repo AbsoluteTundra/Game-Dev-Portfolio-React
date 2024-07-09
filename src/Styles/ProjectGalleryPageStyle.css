@@ -48,11 +48,8 @@
 .ProjectSection > p
 {
     flex-grow: 1;
-}
-
-.ProjectSectionSelected > p
-{
-    flex-grow: 1;
+    padding-left: 1%;
+    padding-right: 1%;
 }
 
 .ProjectImage

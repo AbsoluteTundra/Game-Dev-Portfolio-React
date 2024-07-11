@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import NavigationBarElement from '../NavigationBarElement'
 import FooterElement from '../FooterElement'
+import "../Styles/ProjectPageStyle.css"
 import ProjectScreenshotGalleryElement from '../ProjectScreenShotGalleryElement'
 
 class InvidualProjectPage extends Component

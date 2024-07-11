@@ -1,6 +1,6 @@
 :root {
     --primary: #A41623;
-    --secondary: #F85E00;
+    --secondary: #00f874;
     --hover: #FFB563;
 }
 
@@ -63,61 +63,3 @@ img
    -webkit-user-select: none;
    -ms-user-select: none;
 }
-
-/* Nav Style*/
-nav
-{
-    color: var(--secondary);
-    background-color: var(--primary);
-    display: flex;
-    justify-content: center;
-    position: fixed;
-    width: 100%;
-    height: 40px;
-    top: 0;
-    z-index: 1;
-}
-
-nav a
-{
-    padding: 0px 5px 0px 5px;
-	border-left: 1px solid var(--secondary);
-	border-right: 1px solid var(--secondary);
-	text-decoration: none;
-	text-align: center;
-	color: var(--secondary);
-	font-size: xx-large;
-    align-self: center;
-}
-
-nav a:hover
-{
-    color:var(--hover);
-    transition-duration: 500ms;
-}
-/* End Nav Style*/
-
-/* Footer Style */
-footer
-{
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    height: 40px;
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
-	flex-direction: row;
-	background-color: var(--primary);
-    z-index: 1;
-}
-
-.FooterIcon
-{
-    vertical-align: middle;
-	width: 25px;
-	height: 25px;
-	padding-left: 5px;
-	padding-right: 5px;
-}
-/* End Footer Style */

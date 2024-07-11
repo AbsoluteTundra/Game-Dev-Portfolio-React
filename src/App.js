@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
 import "./Styles/GlobalStyle.css"
-import "./Styles/ProjectPageStyle.css"
-import "./Styles/AboutMePageStyle.css"
-import "./Styles/ProjectGalleryPageStyle.css"
 import InvidualProjectPage from './Pages/InvidualProjectPage'
 import ProjectGalleryPage from './Pages/ProjectGalleryPage'
 import AboutMePage from './Pages/AboutMePage'

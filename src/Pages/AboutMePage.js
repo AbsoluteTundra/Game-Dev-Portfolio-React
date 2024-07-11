@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import NavigationBarElement from '../NavigationBarElement'
 import FooterElement from '../FooterElement'
+import "../Styles/AboutMePageStyle.css"
 
 class AboutMePage extends Component {
   constructor(props) {

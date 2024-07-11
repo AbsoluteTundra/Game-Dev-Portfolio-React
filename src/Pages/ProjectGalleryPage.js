@@ -3,6 +3,7 @@ import NavigationBarElement from '../NavigationBarElement'
 import FooterElement from '../FooterElement'
 import {ProjectsData} from "../ProjectsData"
 import ProjectGalleryElement from '../ProjectGalleryElement'
+import "../Styles/ProjectGalleryPageStyle.css"
 
 class ProjectGalleryPage extends Component
 {

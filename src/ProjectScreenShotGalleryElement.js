@@ -3,21 +3,17 @@ import "./Styles/ProjectScreenShotGallery.css"
 
 
 class ProjectScreenShotGalleryElement extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            currentImageIndex: 1,
-        }
-
-        this.interval = null;
+    state = {
+        currentImageIndex: 1,
+        interval: null
     }
 
     componentDidMount() {
-        this.interval = setInterval(this.NextScreenShot, this.props.intervalTime  == undefined ? 5000 : this.props.intervalTime );
+        this.interval = setInterval(this.NextScreenShot, this.props.intervalTime == undefined ? 5000 : this.props.intervalTime);
     }
 
     componentWillUnmount() {
-        window.clearInterval(this.interval);
+        clearInterval(this.interval);
     }
 
     NextScreenShot = () => {

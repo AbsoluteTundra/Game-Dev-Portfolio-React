@@ -4,7 +4,7 @@ export const ProjectsData=
         projectTitle:"Muscle Magic",
         projectDescription:"Muscle Magic is a local multiplayer brawler in which you play as powerful, muscular wizards and barrage your opponents with a variety of wacky spells. Grab up to 3 of your friends and duke it out to see who is truly the fittest mage of them all!",
         projectPage:"https://store.steampowered.com/app/1061150/Muscle_Magic/",
-        projectDirectory:"Projects/MuscleMagic/",
+        projectDirectory:"projects/MuscleMagic/",
         projectTeamSize:"20+",
         projectEngine:"Unreal 4",
         projectYear:"2019",

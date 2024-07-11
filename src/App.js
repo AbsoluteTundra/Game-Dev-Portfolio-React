@@ -5,48 +5,40 @@ import ProjectGalleryPage from './Pages/ProjectGalleryPage'
 import AboutMePage from './Pages/AboutMePage'
 
 
-class App extends Component
-{
-  constructor(props) 
-  {
+class App extends Component {
+  constructor(props) {
     super(props);
 
     this.state = {
-        currentPage : "ProjectsGallery",
-        currentSelectedProject:"None"
+      currentPage: "ProjectsGallery",
+      currentSelectedProject: "None"
     };
   }
-  
 
-  LoadProjectPage=(selectedProjectInfo)=>
-  {
+
+  LoadProjectPage = (selectedProjectInfo) => {
     this.SwitchPage("ProjectPage")
-    this.setState({currentSelectedProject:selectedProjectInfo});
+    this.setState({ currentSelectedProject: selectedProjectInfo });
   }
 
-  SwitchPage=(newPage)=>
-  {
-    this.setState({currentPage:newPage})
+  SwitchPage = (newPage) => {
+    this.setState({ currentPage: newPage })
   }
 
-  render()
-  {
-    if(this.state.currentPage=="ProjectsGallery")
-    {
+  render() {
+    if (this.state.currentPage == "ProjectsGallery") {
       return (
-        <ProjectGalleryPage pageSwitcher={this.SwitchPage} loadProjectHandler={this.LoadProjectPage} projectInfo={this.state.currentSelectedProject}/>
+        <ProjectGalleryPage pageSwitcher={this.SwitchPage} loadProjectHandler={this.LoadProjectPage} projectInfo={this.state.currentSelectedProject} />
       );
     }
-    else if(this.state.currentPage=="ProjectPage")
-    {
+    else if (this.state.currentPage == "ProjectPage") {
       return (
-        <InvidualProjectPage pageSwitcher={this.SwitchPage} currentSelectedProject={this.state.currentSelectedProject}/>
+        <InvidualProjectPage pageSwitcher={this.SwitchPage} currentSelectedProject={this.state.currentSelectedProject} />
       );
     }
-    else if(this.state.currentPage=="AboutMe")
-    {
+    else if (this.state.currentPage == "AboutMe") {
       return (
-        <AboutMePage pageSwitcher={this.SwitchPage}/>
+        <AboutMePage pageSwitcher={this.SwitchPage} />
       );
     }
   }

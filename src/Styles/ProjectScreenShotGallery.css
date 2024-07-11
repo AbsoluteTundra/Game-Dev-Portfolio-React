@@ -1,0 +1,15 @@
+.ProjectScreenshotGalleryContainer
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1%;
+}
+
+.ProjectScreenshotGallery
+{
+    width: 75%;
+    border-style: solid;
+    border-color: var(--primary);
+}

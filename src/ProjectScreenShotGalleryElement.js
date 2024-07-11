@@ -1,40 +1,39 @@
 import React, { Component } from 'react';
 
 
-class ProjectScreenShotGalleryElement extends Component
-{
-    constructor(props)
-    {
+class ProjectScreenShotGalleryElement extends Component {
+    constructor(props) {
         super(props);
-        this.image = React.createRef();
+        this.state = {
+            currentImageIndex: 1,
+        }
+
+        this.interval = null;
     }
 
-    SwitchScreenShot=()=>
-    {
-        var i =1;
-        setInterval(() => {
-
-            if(this.image.current!=null)
-            {
-                this.image.current.src=this.props.screenshotsDirectory+"screenshot"+i+".jpg";
-                i++
-
-                if(i>this.props.screenshotCount)
-                {
-                    i=1;
-                }
-            }
-        }, 5000);
+    componentDidMount() {
+        this.interval = setInterval(this.NextScreenShot, this.props.intervalTime  == undefined ? 5000 : this.props.intervalTime );
     }
 
-    render()
-    {
-        {this.SwitchScreenShot()}
-        return(
-            <div  className="ProjectScreenshotGalleryContainer">
+    componentWillUnmount() {
+        window.clearInterval(this.interval);
+    }
+
+    NextScreenShot = () => {
+        this.setState((prevState) => {
+            const nextIndex = prevState.currentImageIndex + 1 > this.props.screenshotCount ? 1 : prevState.currentImageIndex + 1;
+            return { currentImageIndex: nextIndex };
+        });
+    };
+
+
+
+    render() {
+        return (
+            <div className="ProjectScreenshotGalleryContainer">
                 <h1>Screenshots:</h1>
-                <img ref={this.image} className="ProjectScreenshotGallery" src={this.props.screenshotsDirectory+"screenshot1.jpg"}></img>
-            </div>  
+                <img className="ProjectScreenshotGallery" src={`${this.props.screenshotsDirectory}screenshot${this.state.currentImageIndex}.jpg`}></img>
+            </div>
         );
     }
 }

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import "./Styles/ProjectGalleryElement.css"
 
 class ProjectGalleryElement extends Component {
     state =
@@ -6,15 +7,17 @@ class ProjectGalleryElement extends Component {
             interval: undefined,
             currentProjectImage: this.props.projectInfo.projectDirectory + "logo.jpg",
             currentScreenshotCount: 0,
+            isProjectSelected: false
         };
 
     ProjectSectionEnter = () => {
-        if(this.state.interval != undefined)
+        if (this.state.interval != undefined)
             return;
-        
+
+        this.setState(() => { return { isProjectSelected: true }; });
+
         this.state.interval = setInterval(() => {
             this.setState(() => {
-                this.state.currentProjectImage = this.props.projectInfo.projectDirectory + "screenshot" + this.state.currentScreenshotCount + ".jpg";
                 const nextIndex = this.state.currentScreenshotCount + 1 > this.props.projectInfo.screenshotCount ? 1 : this.state.currentScreenshotCount + 1;
                 return {
                     currentProjectImage: this.props.projectInfo.projectDirectory + "screenshot" + nextIndex + ".jpg",
@@ -26,23 +29,27 @@ class ProjectGalleryElement extends Component {
 
     componentWillUnmount() {
         clearInterval(this.state.interval);
-        this.state.interval = undefined
     }
 
     ProjectSectionLeave = () => {
         this.setState(() => {
-            clearInterval(this.state.interval);
             return {
+                isProjectSelected: false,
                 currentProjectImage: this.props.projectInfo.projectDirectory + "logo.jpg",
                 currentScreenshotCount: 0,
-                interval: undefined
+                interval: clearInterval(this.state.interval)
             };
         });
     }
 
     render() {
+        let className = "ProjectSection"
+
+        if (this.state.isProjectSelected)
+            className += " ProjectSectionSelected"
+        
         return (
-            <div onMouseEnter={this.ProjectSectionEnter} onTouchStart={this.ProjectSectionEnter} onMouseLeave={this.ProjectSectionLeave} onTouchEnd={this.ProjectSectionLeave} className="ProjectSection">
+            <div onMouseEnter={this.ProjectSectionEnter} onTouchStart={this.ProjectSectionEnter} onMouseLeave={this.ProjectSectionLeave} onTouchEnd={this.ProjectSectionLeave} className={className}>
                 <img className="ProjectImage" src={this.state.currentProjectImage}></img>
                 <p>{this.props.projectInfo.projectDescription}</p>
                 <a onClick={this.OnClickProjectButton} className="ProjectSectionButton">Go to project page</a>

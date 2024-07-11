@@ -13,7 +13,7 @@ class AboutMePage extends Component {
       <div>
         <NavigationBarElement pageSwitcher={this.props.pageSwitcher} />
         <h1>About Me</h1>
-  
+
         <div className='ExperienceBlock'>
           <img src="me.jpg"></img>
           <div>
@@ -23,7 +23,7 @@ class AboutMePage extends Component {
         </div>
 
         <h1>Jobs</h1>
- 
+
         <div className='ExperienceBlock'>
           <img src="bluetea_logo.jpg"></img>
           <div>
@@ -38,8 +38,8 @@ class AboutMePage extends Component {
           <div>
             <h1>Bachelor of Applied Science - BASc - HBO Bachelor Creative Media and Game Technologies</h1>
             <p>Developed multiple projects, including launching two games on Steam (Muscle Magic and To The Core).
-Gained expertise in developing core gameplay mechanics, UI/UX elements, integrating animations, and improving AI systems.
-Worked closely with diverse teams, enhancing teamwork, project management, and communication skills.</p>
+              Gained expertise in developing core gameplay mechanics, UI/UX elements, integrating animations, and improving AI systems.
+              Worked closely with diverse teams, enhancing teamwork, project management, and communication skills.</p>
           </div>
         </div>
 
@@ -48,11 +48,11 @@ Worked closely with diverse teams, enhancing teamwork, project management, and c
           <div>
             <h1>MBO Applicatie - en mediaontwikkeling (Gamedeveloper)</h1>
             <p>Gained expertise in Unity, developing multiple projects, and proficiency in C# and JavaScript (Unity Engine).
-Worked within diverse teams to design, develop, and deploy engaging games, enhancing teamwork and project management skills.
-Improved problem-solving skills through debugging, optimization, and creative solutions.</p>
+              Worked within diverse teams to design, develop, and deploy engaging games, enhancing teamwork and project management skills.
+              Improved problem-solving skills through debugging, optimization, and creative solutions.</p>
           </div>
         </div>
-        
+
         <FooterElement />
       </div>
     );

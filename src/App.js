@@ -6,14 +6,10 @@ import AboutMePage from './Pages/AboutMePage'
 
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      currentPage: "ProjectsGallery",
-      currentSelectedProject: "None"
-    };
-  }
+  state = {
+    currentPage: "ProjectsGallery",
+    currentSelectedProject: "None"
+  };
 
 
   LoadProjectPage = (selectedProjectInfo) => {
@@ -28,7 +24,7 @@ class App extends Component {
   render() {
     if (this.state.currentPage == "ProjectsGallery") {
       return (
-        <ProjectGalleryPage pageSwitcher={this.SwitchPage} loadProjectHandler={this.LoadProjectPage} projectInfo={this.state.currentSelectedProject} />
+        <ProjectGalleryPage pageSwitcher={this.SwitchPage} loadProjectHandler={this.LoadProjectPage} />
       );
     }
     else if (this.state.currentPage == "ProjectPage") {

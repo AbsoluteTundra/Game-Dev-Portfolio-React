@@ -26,8 +26,6 @@ class ProjectScreenShotGalleryElement extends Component {
         });
     };
 
-
-
     render() {
         return (
             <div className="ProjectScreenshotGalleryContainer">

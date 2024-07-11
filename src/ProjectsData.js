@@ -52,7 +52,7 @@ export const ProjectsData=
         projectTitle:"To The Core",
         projectDescription:"To the Core is a roguelite action-platforming speedrunner. Run, jump and dash your way through levels filled with obstacles and hazards. Fight through heaps of enemies to save your father and set record times",
         projectPage:"https://store.steampowered.com/app/874030/To_the_Core/",
-        projectDirectory:"Projects/ToTheCore/",
+        projectDirectory:"projects/ToTheCore/",
         projectTeamSize:"20+",
         projectEngine:"Unreal 4",
         projectYear:"2018",

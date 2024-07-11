@@ -9,6 +9,9 @@ class ProjectGalleryElement extends Component {
         };
 
     ProjectSectionEnter = () => {
+        if(this.state.interval != undefined)
+            return;
+        
         this.state.interval = setInterval(() => {
             this.setState(() => {
                 this.state.currentProjectImage = this.props.projectInfo.projectDirectory + "screenshot" + this.state.currentScreenshotCount + ".jpg";

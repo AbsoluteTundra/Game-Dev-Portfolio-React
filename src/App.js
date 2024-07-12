@@ -3,6 +3,8 @@ import "./Styles/GlobalStyle.css"
 import InvidualProjectPage from './Pages/InvidualProjectPage'
 import ProjectGalleryPage from './Pages/ProjectGalleryPage'
 import AboutMePage from './Pages/AboutMePage'
+import NavigationBarElement from './NavigationBarElement'
+import FooterElement from './FooterElement';
 
 
 class App extends Component {
@@ -19,26 +21,30 @@ class App extends Component {
 
   SwitchPage = (newPage) => {
     this.setState({ currentPage: newPage })
+    console.log("Switch Page");
   }
 
   render() {
+
+    let pageContent;
     if (this.state.currentPage == "ProjectsGallery") {
-      return (
-        <ProjectGalleryPage pageSwitcher={this.SwitchPage} loadProjectHandler={this.LoadProjectPage} />
-      );
+      pageContent = <ProjectGalleryPage pageSwitcher={this.SwitchPage} loadProjectHandler={this.LoadProjectPage} />
     }
     else if (this.state.currentPage == "ProjectPage") {
-      return (
-        <InvidualProjectPage pageSwitcher={this.SwitchPage} currentSelectedProject={this.state.currentSelectedProject} />
-      );
+      pageContent = <InvidualProjectPage pageSwitcher={this.SwitchPage} currentSelectedProject={this.state.currentSelectedProject} />
     }
     else if (this.state.currentPage == "AboutMe") {
-      return (
-        <AboutMePage pageSwitcher={this.SwitchPage} />
-      );
+      pageContent = <AboutMePage pageSwitcher={this.SwitchPage} />
     }
-  }
 
+    return (
+      <>
+        <NavigationBarElement pageSwitcher={this.SwitchPage} />
+        {pageContent}
+        <FooterElement />
+      </>
+    )
+  }
 }
 
 export default App;

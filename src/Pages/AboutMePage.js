@@ -1,17 +1,10 @@
 import React, { Component } from 'react';
-import NavigationBarElement from '../NavigationBarElement'
-import FooterElement from '../FooterElement'
 import "../Styles/AboutMePageStyle.css"
 
 class AboutMePage extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <div>
-        <NavigationBarElement pageSwitcher={this.props.pageSwitcher} />
         <h1>About Me</h1>
 
         <div className='ExperienceBlock'>
@@ -52,8 +45,6 @@ class AboutMePage extends Component {
               Improved problem-solving skills through debugging, optimization, and creative solutions.</p>
           </div>
         </div>
-
-        <FooterElement />
       </div>
     );
   }

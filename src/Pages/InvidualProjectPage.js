@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import NavigationBarElement from '../NavigationBarElement'
-import FooterElement from '../FooterElement'
 import "../Styles/ProjectPageStyle.css"
 import ProjectScreenshotGalleryElement from '../ProjectScreenShotGalleryElement'
 
 class InvidualProjectPage extends Component {
+  //TODO Move to new component
   ProjectTrailerElement() {
     if (this.props.currentSelectedProject.projectTrailerLink != "") {
       return (
@@ -22,7 +21,6 @@ class InvidualProjectPage extends Component {
   render() {
     return (
       <div>
-        <NavigationBarElement pageSwitcher={this.props.pageSwitcher} />
         <div className="ProjectPage">
           <img className="ProjectPageImage" src={this.props.currentSelectedProject.projectDirectory + "logo.jpg"} />
           <h1>Project Description</h1>
@@ -43,7 +41,6 @@ class InvidualProjectPage extends Component {
           {this.ProjectTrailerElement()}
 
         </div>
-        <FooterElement />
       </div>
     );
   }

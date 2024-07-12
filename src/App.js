@@ -16,7 +16,7 @@ class App extends Component {
       <>
         <NavigationBarElement pageSwitcher={this.SwitchPage} />
         <Routes>
-          <Route path="/" element={<ProjectGalleryPage loadProjectHandler={this.LoadProjectPage} />} />
+          <Route path="/" element={<ProjectGalleryPage />} />
           <Route path="/AboutMe" element={<AboutMePage />} />
           <Route path="*" element={<h1>Page not found</h1>} />
           {ProjectsData.map((projectInfo) => (<Route path={"/" + projectInfo.projectTitle} element={<InvidualProjectPage currentSelectedProject={projectInfo} />} />))}

@@ -6,7 +6,7 @@ import { BrowserRouter } from 'react-router-dom';
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter basename="/Game-Dev-Portfolio-React">
+    <BrowserRouter basename="/Game-Dev-Portfolio-React/">
       <App />
     </BrowserRouter>
   </React.StrictMode>,

@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React, { useEffect } from 'react';
+import { Route, Routes, useLocation } from 'react-router-dom';
 import "./Styles/GlobalStyle.css"
 import InvidualProjectPage from './Pages/InvidualProjectPage'
 import ProjectGalleryPage from './Pages/ProjectGalleryPage'
@@ -6,24 +7,28 @@ import AboutMePage from './Pages/AboutMePage'
 import { ProjectsData } from "./ProjectsData"
 import NavigationBarElement from './NavigationBarElement'
 import FooterElement from './FooterElement';
-import { Route, Routes } from 'react-router-dom';
 
+const App = () => {
+  const { pathname } = useLocation();
 
-class App extends Component {
-  render() {
-    return (
-      <>
-        <NavigationBarElement />
-        <Routes>
-          <Route path="/" element={<ProjectGalleryPage />} />
-          <Route path="/AboutMe" element={<AboutMePage />} />
-          <Route path="*" element={<h1>Page not found</h1>} />
-          {ProjectsData.map((projectInfo) => (<Route path={"/" + projectInfo.projectTitle} element={<InvidualProjectPage currentSelectedProject={projectInfo} />} />))}
-        </Routes>
-        <FooterElement />
-      </>
-    )
-  }
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return (
+    <>
+      <NavigationBarElement />
+      <Routes>
+        <Route path="/" element={<ProjectGalleryPage />} />
+        <Route path="/AboutMe" element={<AboutMePage />} />
+        <Route path="*" element={<h1>Page not found</h1>} />
+        {ProjectsData.map((projectInfo) => (
+          <Route key={projectInfo.projectTitle} path={"/" + projectInfo.projectTitle} element={<InvidualProjectPage currentSelectedProject={projectInfo} />} />
+        ))}
+      </Routes>
+      <FooterElement />
+    </>
+  );
 }
 
 export default App;

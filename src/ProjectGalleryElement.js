@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import "./Styles/ProjectGalleryElement.css"
+import { Link } from 'react-router-dom';
 
 class ProjectGalleryElement extends Component {
     state =
@@ -47,18 +48,14 @@ class ProjectGalleryElement extends Component {
 
         if (this.state.isProjectSelected)
             className += " ProjectSectionSelected"
-        
+
         return (
             <div onMouseEnter={this.ProjectSectionEnter} onTouchStart={this.ProjectSectionEnter} onMouseLeave={this.ProjectSectionLeave} onTouchEnd={this.ProjectSectionLeave} className={className}>
                 <img className="ProjectImage" src={this.state.currentProjectImage}></img>
                 <p>{this.props.projectInfo.projectDescription}</p>
-                <a onClick={this.OnClickProjectButton} className="ProjectSectionButton">Go to project page</a>
+                <Link to={"/" + this.props.projectInfo.projectTitle} className="ProjectSectionButton">Go to project page</Link>
             </div>
         );
-    }
-
-    OnClickProjectButton = () => {
-        this.props.loadProjectHandler(this.props.projectInfo);
     }
 }
 

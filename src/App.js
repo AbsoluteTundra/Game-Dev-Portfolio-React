@@ -3,44 +3,24 @@ import "./Styles/GlobalStyle.css"
 import InvidualProjectPage from './Pages/InvidualProjectPage'
 import ProjectGalleryPage from './Pages/ProjectGalleryPage'
 import AboutMePage from './Pages/AboutMePage'
+import { ProjectsData } from "./ProjectsData"
 import NavigationBarElement from './NavigationBarElement'
 import FooterElement from './FooterElement';
+import { Route, Routes } from 'react-router-dom';
 
 
 class App extends Component {
-  state = {
-    currentPage: "ProjectsGallery",
-    currentSelectedProject: "None"
-  };
-
-
-  LoadProjectPage = (selectedProjectInfo) => {
-    this.SwitchPage("ProjectPage")
-    this.setState({ currentSelectedProject: selectedProjectInfo });
-  }
-
-  SwitchPage = (newPage) => {
-    this.setState({ currentPage: newPage })
-    console.log("Switch Page");
-  }
-
   render() {
-
-    let pageContent;
-    if (this.state.currentPage == "ProjectsGallery") {
-      pageContent = <ProjectGalleryPage pageSwitcher={this.SwitchPage} loadProjectHandler={this.LoadProjectPage} />
-    }
-    else if (this.state.currentPage == "ProjectPage") {
-      pageContent = <InvidualProjectPage pageSwitcher={this.SwitchPage} currentSelectedProject={this.state.currentSelectedProject} />
-    }
-    else if (this.state.currentPage == "AboutMe") {
-      pageContent = <AboutMePage pageSwitcher={this.SwitchPage} />
-    }
 
     return (
       <>
         <NavigationBarElement pageSwitcher={this.SwitchPage} />
-        {pageContent}
+        <Routes>
+          <Route path="/" element={<ProjectGalleryPage loadProjectHandler={this.LoadProjectPage} />} />
+          <Route path="/AboutMe" element={<AboutMePage />} />
+          <Route path="*" element={<h1>Page not found</h1>} />
+          {ProjectsData.map((projectInfo) => (<Route path={"/" + projectInfo.projectTitle} element={<InvidualProjectPage currentSelectedProject={projectInfo} />} />))}
+        </Routes>
         <FooterElement />
       </>
     )

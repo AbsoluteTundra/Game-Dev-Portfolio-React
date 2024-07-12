@@ -10,11 +10,7 @@ class ProjectGalleryPage extends Component {
                 <div className="ProjectGalleryContainer">
                     <h1>Projects</h1>
                     <div className="ProjectItemsContainer">
-
-                        {ProjectsData.map((projectInfo) => (
-                            <ProjectGalleryElement loadProjectHandler={this.props.loadProjectHandler} projectInfo={projectInfo} />
-                        ))}
-
+                        {ProjectsData.map((projectInfo) => (<ProjectGalleryElement projectInfo={projectInfo} />))}
                     </div>
                 </div>
             </div>

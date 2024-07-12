@@ -1,33 +1,16 @@
 import React, { Component } from 'react';
 import "./Styles/NavigationBar.css"
+import { Link } from 'react-router-dom';
 
 
-class NavigationBarElement extends Component
-{
-
-  constructor(props)
-  {
-      super(props);
-  }
-
-  render()
-  {
-    return(
-        <nav>
-        <a onClick={this.OnProjectsClick}>Projects</a>
-        <a onClick={this.OnAboutMeClick}>About Me</a>
-        </nav>    
+class NavigationBarElement extends Component {
+  render() {
+    return (
+      <nav>
+        <Link to="/">Projects</Link>
+        <Link to="/AboutMe">About Me</Link>
+      </nav>
     );
-  }
-
-  OnProjectsClick=()=>
-  {
-    this.props.pageSwitcher("ProjectsGallery");
-  }
-
-  OnAboutMeClick=()=>
-  {
-    this.props.pageSwitcher("AboutMe");
   }
 }
 

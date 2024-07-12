@@ -11,7 +11,6 @@ import { Route, Routes } from 'react-router-dom';
 
 class App extends Component {
   render() {
-
     return (
       <>
         <NavigationBarElement pageSwitcher={this.SwitchPage} />

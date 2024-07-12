@@ -13,7 +13,7 @@ class App extends Component {
   render() {
     return (
       <>
-        <NavigationBarElement pageSwitcher={this.SwitchPage} />
+        <NavigationBarElement />
         <Routes>
           <Route path="/" element={<ProjectGalleryPage />} />
           <Route path="/AboutMe" element={<AboutMePage />} />

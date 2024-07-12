@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Game-Dev-Portfolio-React/static/css/main.9121f46d.css",
-    "main.js": "/Game-Dev-Portfolio-React/static/js/main.f8c5a450.js",
+    "main.js": "/Game-Dev-Portfolio-React/static/js/main.7801179f.js",
     "static/js/787.166b47fc.chunk.js": "/Game-Dev-Portfolio-React/static/js/787.166b47fc.chunk.js",
     "index.html": "/Game-Dev-Portfolio-React/index.html",
     "main.9121f46d.css.map": "/Game-Dev-Portfolio-React/static/css/main.9121f46d.css.map",
-    "main.f8c5a450.js.map": "/Game-Dev-Portfolio-React/static/js/main.f8c5a450.js.map",
+    "main.7801179f.js.map": "/Game-Dev-Portfolio-React/static/js/main.7801179f.js.map",
     "787.166b47fc.chunk.js.map": "/Game-Dev-Portfolio-React/static/js/787.166b47fc.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9121f46d.css",
-    "static/js/main.f8c5a450.js"
+    "static/js/main.7801179f.js"
   ]
 }

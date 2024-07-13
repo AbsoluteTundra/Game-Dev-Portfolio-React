@@ -45,5 +45,4 @@
 
 .ProjectSectionButton:hover {
     background-color: var(--hover);
-    transition-duration: 500ms;
 }

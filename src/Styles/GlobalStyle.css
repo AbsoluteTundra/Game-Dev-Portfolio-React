@@ -1,7 +1,9 @@
 :root {
-    --primary: #A41623;
-    --secondary: #F85E00;
-    --hover: #FFB563;
+    --primary: #000000;
+    --secondary: #929292;
+    --tertiary: #b4b4b4;
+    --hover: #979797;
+    --text-color: white;
 }
 
 html {
@@ -38,14 +40,14 @@ body {
 }
 
 h1 {
-    color: var(--primary);
+    color: var(--text-color);
     text-decoration: underline;
     text-align: center;
     margin: 0;
 }
 
 p {
-    color: var(--primary);
+    color: var(--text-color);
     margin: 0;
     font-size: large;
 }

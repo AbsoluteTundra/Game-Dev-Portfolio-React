@@ -33,7 +33,7 @@
 
 .ProjectSectionButton {
     background-color: var(--primary);
-    color: var(--secondary);
+    color: var(--text-color);
     font-size: 15px;
     border-radius: 5px;
     padding: 10px;

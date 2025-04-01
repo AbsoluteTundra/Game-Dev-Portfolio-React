@@ -18,7 +18,7 @@ nav a
 	text-decoration: none;
 	text-align: center;
 	color: var(--text-color);
-	font-size: xx-large;
+	font-size: large;
     align-self: center;
     font-weight: bolder;
 }

@@ -8,6 +8,10 @@ class ProjectGalleryPage extends Component {
         return (
             <div>
                 <div className="ProjectGalleryContainer">
+                    <div className="ProjectGalleryHeader">
+                        <h1>Welcome to My Portfolio</h1>
+                        <h2>Explore my projects, passion, and journey as a game developer.</h2>
+                    </div>
                     <h1>Projects</h1>
                     <div className="ProjectItemsContainer">
                         {ProjectsData.map((projectInfo) => (<ProjectGalleryElement projectInfo={projectInfo} />))}

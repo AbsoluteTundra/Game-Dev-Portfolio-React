@@ -9,18 +9,18 @@ nav
     height: 40px;
     top: 0;
     z-index: 1;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
 }
 
 nav a
 {
-    padding: 0px 5px 0px 5px;
-	border-left: 1px solid var(--secondary);
-	border-right: 1px solid var(--secondary);
+    padding: 0px 20px 0px 20px;
 	text-decoration: none;
 	text-align: center;
-	color: var(--secondary);
+	color: var(--text-color);
 	font-size: xx-large;
     align-self: center;
+    font-weight: bolder;
 }
 
 nav a:hover

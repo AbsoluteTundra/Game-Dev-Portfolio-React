@@ -10,7 +10,7 @@
     border-color: var(--primary);
     border-radius: 5px;
     transition-duration: 500ms;
-    background-color: var(--tertiary);
+    background-color: var(--secondary);
     border-radius: 30px;
     position: relative;
     margin: 25px;

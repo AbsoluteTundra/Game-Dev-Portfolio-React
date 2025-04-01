@@ -30,3 +30,19 @@
 {
     display: grid;
 }
+
+.ProjectGalleryHeader
+{
+    padding: 35px;
+    background-color: var(--primary);
+}
+
+.ProjectGalleryHeader>h1
+{
+    text-align: center;
+}
+
+.ProjectGalleryHeader>h2
+{
+    text-align: center;
+}

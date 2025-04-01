@@ -46,10 +46,14 @@ h1 {
     margin: 0;
 }
 
+
+h2 {
+    color: var(--text-color);
+}
+
 p {
     color: var(--text-color);
     margin: 0;
-    font-size: large;
 }
 
 img {

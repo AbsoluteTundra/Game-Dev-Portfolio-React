@@ -26,7 +26,7 @@ class ProjectScreenShotGalleryElement extends Component {
     render() {
         return (
             <div className="ProjectScreenshotGalleryContainer">
-                <h1>Screenshots:</h1>
+                <h1>Screenshots</h1>
                 <img className="ProjectScreenshotGallery" src={`${this.props.screenshotsDirectory}screenshot${this.state.currentImageIndex}.jpg`}></img>
             </div>
         );

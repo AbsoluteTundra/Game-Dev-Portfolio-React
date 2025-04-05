@@ -8,7 +8,7 @@ class InvidualProjectPage extends Component {
     if (this.props.currentSelectedProject.projectTrailerLink != "") {
       return (
         <div className="ProjectTrailerContainer">
-          <h1>Trailer:</h1>
+          <h1>Trailer</h1>
           <div className="IFrameContainer">
             <iframe class="IFrameVideo" src={this.props.currentSelectedProject.projectTrailerLink} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>

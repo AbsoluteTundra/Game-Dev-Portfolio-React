@@ -40,9 +40,11 @@
 .ProjectGalleryHeader>h1
 {
     text-align: center;
+    color : var(--text-color);
 }
 
 .ProjectGalleryHeader>h2
 {
     text-align: center;
+    color : var(--text-color);
 }

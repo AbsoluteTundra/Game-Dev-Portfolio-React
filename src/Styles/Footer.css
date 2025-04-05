@@ -8,8 +8,9 @@ footer
 	justify-content: center;
 	align-items: center;
 	flex-direction: row;
-	background-color: var(--primary);
+	background-color: var(--secondary);
 	z-index: 1;
+	box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.25);
 }
 
 .FooterIcon

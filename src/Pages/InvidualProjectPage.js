@@ -5,7 +5,7 @@ import ProjectScreenshotGalleryElement from '../ProjectScreenShotGalleryElement'
 class InvidualProjectPage extends Component {
   //TODO Move to new component
   ProjectTrailerElement() {
-    if (this.props.currentSelectedProject.projectTrailerLink != "") {
+    if (this.props.currentSelectedProject.projectTrailerLink != "" && this.props.currentSelectedProject.projectTrailerLink) {
       return (
         <div className="ProjectTrailerContainer">
           <h1>Trailer</h1>
@@ -36,7 +36,12 @@ class InvidualProjectPage extends Component {
           <h1>Developer Story</h1>
           <p className="ProjectPageParagraph">{this.props.currentSelectedProject.projectDevStory}</p>
 
-          <ProjectScreenshotGalleryElement screenshotCount={this.props.currentSelectedProject.screenshotCount} screenshotsDirectory={this.props.currentSelectedProject.projectDirectory} />
+          {this.props.currentSelectedProject.screenshotCount && this.props.currentSelectedProject.screenshotCount > 0 && (
+            <ProjectScreenshotGalleryElement 
+              screenshotCount={this.props.currentSelectedProject.screenshotCount} 
+              screenshotsDirectory={this.props.currentSelectedProject.projectDirectory} 
+            />
+          )}
 
           {this.ProjectTrailerElement()}
 

@@ -5,8 +5,8 @@ import InvidualProjectPage from './Pages/InvidualProjectPage'
 import ProjectGalleryPage from './Pages/ProjectGalleryPage'
 import AboutMePage from './Pages/AboutMePage'
 import { ProjectsData } from "./ProjectsData"
-import NavigationBarElement from './NavigationBarElement'
-import FooterElement from './FooterElement';
+import NavigationBarElement from './Components/NavigationBarElement'
+import FooterElement from './Components/FooterElement';
 
 const App = () => {
   const { pathname } = useLocation();

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import "../Styles/ProjectPageStyle.css"
-import ProjectScreenshotGalleryElement from '../ProjectScreenShotGalleryElement'
+import "../Styles/Pages/ProjectPageStyle.css"
+import ProjectScreenshotGalleryElement from '../Components/ProjectScreenShotGalleryElement'
 
 class InvidualProjectPage extends Component {
   //TODO Move to new component

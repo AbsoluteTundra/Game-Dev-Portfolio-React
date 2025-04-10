@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { ProjectsData } from "../ProjectsData"
-import ProjectGalleryElement from '../ProjectGalleryElement'
-import "../Styles/ProjectGalleryPageStyle.css"
+import ProjectGalleryElement from '../Components/ProjectGalleryElement'
+import "../Styles/Pages/ProjectGalleryPageStyle.css"
 
 class ProjectGalleryPage extends Component {
     render() {

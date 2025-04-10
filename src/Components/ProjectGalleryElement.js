@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import "./Styles/ProjectGalleryElement.css"
+import "../Styles/Components/ProjectGalleryElement.css"
 import { Link } from 'react-router-dom';
 
 class ProjectGalleryElement extends Component {

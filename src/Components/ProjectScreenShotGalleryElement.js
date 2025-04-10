@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import "./Styles/ProjectScreenShotGallery.css"
+import "../Styles/Components/ProjectScreenShotGallery.css"
 
 
 class ProjectScreenShotGalleryElement extends Component {

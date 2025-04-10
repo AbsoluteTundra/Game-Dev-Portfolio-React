@@ -3,6 +3,7 @@
 :root {
     --primary: #ff4500; /* Fiery orange-red */
     --secondary: #2b2b2b; /* Dark charcoal for contrast */
+    --secondary-light: #6b6b6b; /* Softer gray with better contrast for white text */
     --tertiary: #ff6347; /* Tomato red */
     --hover: #ff8c00; /* Dark orange */
     --text-color: #f5f5f5; /* Light gray for softer contrast */

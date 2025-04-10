@@ -17,6 +17,9 @@ class ProjectGalleryElement extends Component {
 
         this.setState(() => { return { isProjectSelected: true }; });
 
+        if(!this.props.projectInfo.screenshotCount || this.props.projectInfo.screenshotCount <= 0)
+            return
+
         this.state.interval = setInterval(() => {
             this.setState(() => {
                 const nextIndex = this.state.currentScreenshotCount + 1 > this.props.projectInfo.screenshotCount ? 1 : this.state.currentScreenshotCount + 1;

@@ -26,7 +26,6 @@ export const ProjectsData = [
     {
         projectTitle: "Random Racing",
         projectDescription: "Random Racing is a racing game inspired by Mario Kart.",
-        projectPage: "https://store.steampowered.com/app/1061150/Muscle_Magic/",
         projectDirectory: "projects/RandomRacing/",
         projectTeamSize: "4",
         projectEngine: "Unity3D",

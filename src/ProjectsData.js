@@ -1,13 +1,13 @@
 export const ProjectsData = [
     {
         projectTitle: "Muscle Magic",
-        projectDescription: "Muscle Magic is a local multiplayer brawler where you play as powerful, muscular wizards and battle your opponents using a variety of wacky spells. Grab up to 3 friends and duke it out to see who is truly the fittest mage of them all!",
+        projectDescription: "Muscle Magic is a local multiplayer party game developed as a school project at Breda University of Applied Sciences. Designed for fast-paced fun, it features musclebound mages battling with over-the-top spells. I played a central role in its development, contributing to the combat system, UI programming, character customization, and animation integration. The game was released on Steam and is best enjoyed with friends for quick, chaotic rounds of spell-slinging action.",
         projectPage: "https://store.steampowered.com/app/1061150/Muscle_Magic/",
         projectDirectory: "projects/MuscleMagic/",
         projectTeamSize: "20+",
         projectEngine: "Unreal 4",
         projectYear: "2019",
-        projectDevStory: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        projectDevStory: "Muscle Magic started as a school project with the goal of creating a party game suited for platforms like the Nintendo Switch. From the beginning, I was heavily involved in all aspects of development. I prototyped and later helped finalize the core combat system, allowing players to cast spells and deal damage in chaotic brawls. I also implemented character animations, drawing on my experience with Animation Blueprints from a previous project.\n\nAs the game evolved, I took on UI programming duties—building the local multiplayer lobby where players could choose hats, staffs, and skin tones for their mage. The lobby and character customization were combined into a single screen, so players could tweak their looks while waiting for others to join. I ensured these choices carried over into gameplay. I also implemented Steam achievements, including quirky ones like doing a thousand in-game push-ups or landing a set number of hits.\n\nAlthough I wasn’t involved in networking (which gave the team some challenges), I frequently assisted others with gameplay, UI, and animation issues. One of the biggest challenges I faced personally was making sure animations and gameplay synced well with the assets from the art team. I'm most proud of the overall polish and fun factor of the game—it’s fast, silly, and perfect for a quick party round. The game launched on Steam and received a small but positive reception.",
         screenshotCount: 5,
         projectTrailerLink: "https://www.youtube.com/embed/XtOX2gqb1wE",
     },

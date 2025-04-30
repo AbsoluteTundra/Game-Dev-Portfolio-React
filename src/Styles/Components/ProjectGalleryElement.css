@@ -9,10 +9,12 @@
     border-radius: 30px;
     position: relative;
     margin: 25px;
+    transition: all 0.25s ease-in-out;
 }
 
 .ProjectSectionSelected {
     border-color: var(--hover);
+    transform:translate(0px, -5px)
 }
 
 .ProjectSection>p {
@@ -37,7 +39,6 @@
     margin: 5px;
     align-self: center;
     text-decoration: none;
-    transition-duration: 500ms;
 }
 
 .ProjectSectionButton:hover {

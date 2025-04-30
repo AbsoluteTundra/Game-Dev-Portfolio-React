@@ -25,12 +25,12 @@ export const ProjectsData = [
     },
     {
         projectTitle: "Random Racing",
-        projectDescription: "Random Racing is a casual kart racing game inspired by Mario Kart, featuring colorful tracks, wild items, and competitive local multiplayer.",
+        projectDescription: "Random Racing is a kart-style racing game. Players race through colorful tracks while competing against AI-controlled opponents. Inspired by classics like Mario Kart, the game aimed to provide a lighthearted and fun racing experience.",
         projectDirectory: "projects/RandomRacing/",
         projectTeamSize: "4",
         projectEngine: "Unity3D",
         projectYear: "2015",
-        projectDevStory: "Random Racing was a small team project I worked on early in my game development journey. It was inspired by Mario Kart and aimed to recreate the chaotic fun of kart racing games with a unique twist. I contributed to both gameplay programming and UI implementation. This project taught me the basics of Unity’s component system and gave me my first real experience working closely with a small team to deliver a playable game. Looking back, it was a simple game, but an important first step toward becoming the developer I am today.",
+        projectDevStory: "Random Racing was my second project in Unity and marked one of my earliest experiences developing a game from scratch. It was a school assignment with a clear objective: build a fun racing game. I took on the role of the sole programmer, meaning I was responsible for all the technical aspects of the game.\n\nMy main focus during development was building the AI system. I implemented a waypoint-based system that allowed AI-controlled racers to follow the track and provide a challenge for the player. This proved much harder than expected—despite my best efforts, the AI never reached the level of polish I had hoped for. They often crashed into obstacles or struggled to follow curves smoothly. Still, it was a fantastic learning experience that helped me better understand Unity, C#, and the challenges of game AI.\n\nWhat made the project particularly memorable was the team itself. We had a great dynamic, and even though I struggled with the technical side, the collaborative and fun environment kept me motivated. This project helped lay the foundation for my growth as a game developer and made me realize how much I enjoy working in a creative, supportive team.",
         screenshotCount: 4
     },
     {

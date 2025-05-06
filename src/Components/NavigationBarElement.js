@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import "../Styles/Components/NavigationBar.css"
-import { Link } from 'react-router-dom';
-
+import { NavLink } from 'react-router-dom';
 
 class NavigationBarElement extends Component {
   render() {
     return (
       <nav>
-        <Link to="/">Projects</Link>
-        <Link to="/AboutMe">About Me</Link>
+        <NavLink to="/" exact activeClassName="active">Projects</NavLink>
+        <NavLink to="/AboutMe" activeClassName="active">About Me</NavLink>
       </nav>
     );
   }

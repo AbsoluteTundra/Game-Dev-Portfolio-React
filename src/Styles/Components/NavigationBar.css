@@ -28,3 +28,9 @@ nav a:hover
     color:var(--hover);
     transition-duration: 500ms;
 }
+
+nav a.active {
+    color: var(--tertiary);
+    text-decoration: underline;
+    transition-duration: 750ms;
+}

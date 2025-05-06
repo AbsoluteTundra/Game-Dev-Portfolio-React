@@ -21,7 +21,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<ProjectGalleryPage />} />
         <Route path="/AboutMe" element={<AboutMePage />} />
-        <Route path="*" element={<h1>Page not found</h1>} />
+        <Route path="*" element={<div className='ErrorPage'><h1>Page not found :(</h1></div>} />
         {ProjectsData.map((projectInfo) => (
           <Route key={projectInfo.projectTitle} path={"/" + projectInfo.projectTitle} element={<InvidualProjectPage currentSelectedProject={projectInfo} />} />
         ))}

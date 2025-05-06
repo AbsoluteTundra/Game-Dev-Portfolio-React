@@ -67,3 +67,12 @@ img {
     -ms-user-select: none;
     pointer-events: none;
 }
+
+.ErrorPage
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 90vh;
+}

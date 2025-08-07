@@ -10,6 +10,7 @@
     position: relative;
     margin: 25px;
     transition: all 0.25s ease-in-out;
+    box-shadow: -10px 10px 5px black;
 }
 
 .ProjectSectionSelected {

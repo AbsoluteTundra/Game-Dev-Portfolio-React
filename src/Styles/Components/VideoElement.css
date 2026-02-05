@@ -1,0 +1,6 @@
+﻿.video-element {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-style: solid;
+    border-color: var(--primary);
+}

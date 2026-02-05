@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import "../Styles/Pages/ProjectPageStyle.css"
 import ProjectScreenshotGalleryElement from '../Components/ProjectScreenShotGalleryElement'
+import VideoElement from "../Components/VideoElement";
 
 class InvidualProjectPage extends Component {
   //TODO Move to new component
@@ -43,7 +44,12 @@ class InvidualProjectPage extends Component {
             />
           )}
 
-          {this.ProjectTrailerElement()}
+          {/* if the video link contains youtube we use the IFrame to display the video else we use our custom video element */}
+          {
+            this.props.currentSelectedProject.projectTrailerLink.includes("youtube")
+                ? this.ProjectTrailerElement()
+                : <VideoElement videoUrl={this.props.currentSelectedProject.projectTrailerLink} />
+          }
 
         </div>
       </div>

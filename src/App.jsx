@@ -8,11 +8,12 @@ import NavigationBarElement from './Components/NavigationBarElement'
 import FooterElement from './Components/FooterElement';
 
 const App = () => {
-  const { pathname } = useLocation();
+  const location = useLocation();
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+    useEffect(() => {
+        if (!location.hash)
+            window.scrollTo(0, 0);
+    })
 
   return (
     <div className="App">

@@ -7,7 +7,6 @@ class NavigationBarElement extends Component {
   render() {
     return (
       <nav>
-         {/* TODO make jump to section work across page*/}
         <HashLink smooth to="/#about-me" activeClassName="active">About Me</HashLink>
         <HashLink smooth to="/#projects" exact activeClassName="active">Projects</HashLink>
       </nav>

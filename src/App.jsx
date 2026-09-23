@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import "./Styles/GlobalStyle.css"
-import IndividualProjectPage from './Pages/InvidualProjectPage'
+import ProjectPage from './Pages/ProjectPage'
 import LandingPage from './Pages/LandingPage'
 import { ProjectsData } from "./ProjectsData"
 import NavigationBarElement from './Components/NavigationBarElement'
@@ -24,7 +24,7 @@ const App = () => {
                 <Route path="*" element={<div className='ErrorPage'><h1>Page not found :(</h1></div>}/>
                 {ProjectsData.map((projectInfo) => (
                     <Route key={projectInfo.projectTitle} path={"/" + projectInfo.projectTitle}
-                           element={<IndividualProjectPage currentSelectedProject={projectInfo}/>}/>
+                           element={<ProjectPage currentSelectedProject={projectInfo}/>}/>
                 ))}
             </Routes>
         </div>

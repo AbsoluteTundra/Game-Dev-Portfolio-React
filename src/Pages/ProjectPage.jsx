@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import "../Styles/Pages/ProjectPageStyle.css"
 import ProjectScreenshotGalleryElement from '../Components/ProjectScreenShotGalleryElement'
 
-class InvidualProjectPage extends Component {
+class ProjectPage extends Component {
     //TODO Move to new component
     ProjectTrailerElement() {
         if (this.props.currentSelectedProject.projectTrailerLink != "" && this.props.currentSelectedProject.projectTrailerLink) {
@@ -58,4 +58,4 @@ class InvidualProjectPage extends Component {
     }
 }
 
-export default InvidualProjectPage;
+export default ProjectPage;

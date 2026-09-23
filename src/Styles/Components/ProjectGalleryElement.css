@@ -1,16 +1,19 @@
+:root {
+    --project-section-border: 30px;
+}
+
 .ProjectSection {
     text-align: center;
     display: flex;
     flex-direction: column;
     border-style: solid;
-    border-width: 5px;
+    border-width: 3px;
     background-color: var(--secondary-light);
     border-color: var(--primary);
-    border-radius: 30px;
+    border-radius: var(--project-section-border);
     position: relative;
     margin: 25px;
     transition: all 0.25s ease-in-out;
-    box-shadow: -10px 10px 5px black;
 }
 
 .ProjectSectionSelected {
@@ -25,8 +28,8 @@
 }
 
 .ProjectImage {
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
+    border-top-left-radius: calc(var(--project-section-border) - 4px);
+    border-top-right-radius: calc(var(--project-section-border) - 4px);
     height: 200px;
     object-fit: cover;
 }

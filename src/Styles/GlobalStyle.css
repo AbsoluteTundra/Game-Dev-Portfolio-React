@@ -38,9 +38,7 @@ html::-webkit-scrollbar {
 }
 
 body {
-    margin-bottom: 60px;
-    margin-left: 0px;
-    margin-right: 0px;
+    margin: 0;
     font-family: var(--font-nice); /* Apply the updated font */
 }
 
@@ -68,7 +66,14 @@ img {
     pointer-events: none;
 }
 
+.App {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 .Page {
+    flex: 1;
 }
 
 .ErrorPage

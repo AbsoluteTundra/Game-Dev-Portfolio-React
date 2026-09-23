@@ -15,7 +15,7 @@ const App = () => {
   }, [pathname]);
 
   return (
-    <>
+    <div className="App">
       <NavigationBarElement />
         <div className="Page">
             <Routes>
@@ -28,7 +28,7 @@ const App = () => {
             </Routes>
         </div>
         <FooterElement/>
-    </>
+    </div>
   );
 }
 

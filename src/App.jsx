@@ -17,14 +17,17 @@ const App = () => {
   return (
     <>
       <NavigationBarElement />
-      <Routes>
-        <Route path="/" element={<LandingPage />} />
-        <Route path="*" element={<div className='ErrorPage'><h1>Page not found :(</h1></div>} />
-        {ProjectsData.map((projectInfo) => (
-          <Route key={projectInfo.projectTitle} path={"/" + projectInfo.projectTitle} element={<InvidualProjectPage currentSelectedProject={projectInfo} />} />
-        ))}
-      </Routes>
-      <FooterElement />
+        <div className="Page">
+            <Routes>
+                <Route path="/" element={<LandingPage/>}/>
+                <Route path="*" element={<div className='ErrorPage'><h1>Page not found :(</h1></div>}/>
+                {ProjectsData.map((projectInfo) => (
+                    <Route key={projectInfo.projectTitle} path={"/" + projectInfo.projectTitle}
+                           element={<InvidualProjectPage currentSelectedProject={projectInfo}/>}/>
+                ))}
+            </Routes>
+        </div>
+        <FooterElement/>
     </>
   );
 }

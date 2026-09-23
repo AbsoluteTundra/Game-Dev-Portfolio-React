@@ -68,6 +68,9 @@ img {
     pointer-events: none;
 }
 
+.Page {
+}
+
 .ErrorPage
 {
     display: flex;

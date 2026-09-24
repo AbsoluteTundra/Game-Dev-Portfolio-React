@@ -8,7 +8,7 @@ class LandingPage extends Component {
         return (
                 <div id="about-me" className="ProjectGalleryContainer">
                     <div className="ProjectGalleryHeader">
-                        <h1 >Welcome to My Portfolio</h1>
+                        <h1 >Welcome to my portfolio</h1>
                         <div className='AboutMeBlock'>
                             <img src="me.jpg"></img>
                             <div>

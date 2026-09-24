@@ -12,7 +12,19 @@ class LandingPage extends Component {
                         <div className='AboutMeBlock'>
                             <img src="me.jpg"></img>
                             <div>
-                                <p>I'm Michel van der Linden, a dynamic and skilled Unity Software Developer with over 5 years of professional experience, including 3 years of dedicated work in a company utilizing Unity. My passion for game development is reflected in my extensive experience with Unity and Unreal Engine 4. I thrive on collaborating with game designers to create engaging and immersive gaming experiences. With a solid background in both the technical and creative aspects of game development, I excel at bringing innovative game concepts to life, ensuring they are both fun and captivating for players.</p>
+                                <p>
+                                    My passion for creating games started when I was little, playing games like Final Fantasy, Rogue Galaxy, and other JRPGs. At some point in school, we were free to pick an assignment on our own, and I decided to make a game in RPG Maker. This led me into game development, and I completed an MBO at Sint Lucas and an HBO at Breda University of Applied Sciences. After graduation, I started at a company that was making training and simulation games. There I discovered how cool it is to create games that combine fun and teaching.
+                                </p>
+                                <p>
+                                    It really motivates me to work together with a multidisciplinary team to create a meaningful experience for the player. I like creating prototypes and finding out together with designers what’s fun. My game engine of choice is Unity, and I’m able to quickly prototype new features and games with it.  With experience in Cinemachine, XR, UI Toolkit (Runtime and Editor), Localization, and more, I like to discover new ways to create meaningful experiences.
+                                </p>
+                                <p>
+                                    Besides Unity, I also made multiple games in Unreal and can also create web application with React or Angular.
+                                </p>
+                                <p>
+
+                                    If you’re curious about my projects, check them out below :)
+                                </p>
                             </div>
                         </div>
                     </div>

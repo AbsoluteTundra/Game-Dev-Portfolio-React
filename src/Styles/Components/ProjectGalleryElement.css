@@ -18,7 +18,10 @@
 
 .ProjectSectionSelected {
     border-color: var(--hover);
-    transform:translate(0px, -5px)
+}
+
+.ProjectSection>h2 {
+    margin: 2px;
 }
 
 .ProjectSection>p {
@@ -47,4 +50,24 @@
 
 .ProjectSectionButton:hover {
     background-color: var(--hover);
+}
+
+.tag-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: balance;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.tag {
+    color: var(--text-color);
+    background-color: var(--secondary);
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--primary);
+    padding: 5px;
 }

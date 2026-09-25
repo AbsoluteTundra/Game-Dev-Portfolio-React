@@ -56,10 +56,18 @@ class ProjectGalleryElement extends Component {
             <div onMouseEnter={this.ProjectSectionEnter} onTouchStart={this.ProjectSectionEnter} onMouseLeave={this.ProjectSectionLeave} onTouchEnd={this.ProjectSectionLeave} className={className}>
                 <img className="ProjectImage" src={this.state.currentProjectImage}></img>
                 <h2>{this.props.projectInfo.projectTitle}</h2>
+                {this.DrawTagContainer()}
                 <p>{this.props.projectInfo.projectDescription}</p>
                 <Link to={"/" + this.props.projectInfo.projectTitle} className="ProjectSectionButton">Go to project page</Link>
             </div>
         );
+    }
+
+    DrawTagContainer()
+    {
+        return <div className="tag-container">
+            {this.props.projectInfo.projectTags.map((tag, index) => <div className="tag">{tag}</div>)}
+        </div>
     }
 }
 

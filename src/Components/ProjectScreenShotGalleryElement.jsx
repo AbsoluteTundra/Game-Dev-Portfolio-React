@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import "../Styles/Components/ProjectScreenShotGallery.css"
+import ArrowLeft from '/public/icons/arrow-left.svg?react'
+import ArrowRight from '/public/icons/arrow-right.svg?react'
 
 
 class ProjectScreenShotGalleryElement extends Component {
@@ -42,11 +44,9 @@ class ProjectScreenShotGalleryElement extends Component {
             <div className="ProjectScreenshotGalleryContainer">
                 <h1>Screenshots</h1>
                 <div className="ProjectScreenshotGallery">
-                    <svg onClick={this.PreviousScreenShot} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="arrow arrow-left"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5"/>
-                    </svg>
+                    <ArrowLeft onClick={this.PreviousScreenShot} className="arrow arrow-left"/>
                     <img src={`${this.props.screenshotsDirectory}screenshot${this.state.currentImageIndex}.jpg`}></img>
-                    <svg onClick={this.NextScreenShot} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="arrow arrow-right"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"/>
-                    </svg>
+                    <ArrowRight onClick={this.PreviousScreenShot} className="arrow arrow-right"/>
                 </div>
             </div>
         );
